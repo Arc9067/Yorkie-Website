@@ -190,9 +190,9 @@ header .menu {
     color: #ffffff;
   }
 }
-#hero .row p.info {
+#hero .row h3.info {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 25px;
   line-height: 32px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -291,4 +291,9 @@ main #features .card-div div aside p {
   font-size: 16px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.8);
+}
+
+footer {
+  padding-block: 50px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

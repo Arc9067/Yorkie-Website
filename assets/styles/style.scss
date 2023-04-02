@@ -198,9 +198,9 @@ header {
         color: #ffffff;
       }
     }
-    p.info {
+    h3.info {
       font-weight: 400;
-      font-size: 16px;
+      font-size: 25px;
       line-height: 32px;
       color: rgba(255, 255, 255, 0.8);
     }
@@ -310,4 +310,9 @@ main {
       }
     }
   }
+}
+
+footer {
+  padding-block: 50px;
+  width: 100%;
 }
