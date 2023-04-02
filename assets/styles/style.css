@@ -1,0 +1,294 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 5rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #64137b;
+  --second-color: #1d1a29;
+  --body-bg: #150929;
+  /*===== Fuente y tipografia =====*/
+  --body-font: "Work Sans", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  /*===== Margenes =====*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: #fff;
+  background-color: var(--body-bg);
+  overflow-x: hidden !important;
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  height: auto;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+::-moz-selection {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+::selection {
+  background-color: var(--first-color);
+  color: var(--second-color);
+}
+
+/*===== CLASS CSS ===== */
+header {
+  width: 100%;
+  padding-block: 15px;
+  position: fixed;
+  top: 0px;
+  z-index: 50;
+}
+header nav {
+  max-width: 1800px;
+  margin: 0 auto;
+  width: 90%;
+}
+header nav .nav-logo {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+@media (max-width: 980px) {
+  header .nav-ul {
+    position: absolute;
+    background-color: var(--first-color);
+    z-index: 100;
+    height: 100vh;
+    width: 70%;
+    left: -100%;
+    top: 0;
+    padding: 20px;
+    padding-top: 100px;
+    transition: all 0.3s linear;
+  }
+  header .nav-ul ul {
+    flex-direction: column;
+  }
+  header .nav-ul ul li a {
+    color: white;
+  }
+  header .display {
+    left: 0 !important;
+  }
+  header a.buy-btn {
+    display: none;
+  }
+  header .menu {
+    display: block !important;
+  }
+}
+header .nav-ul li a {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+header a.buy-btn {
+  padding: 10px 32px;
+  gap: 10px;
+  background: linear-gradient(90deg, #6e137b 0%, #23147b 100%);
+  /* Drop Shadow */
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  border-radius: 30px;
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+  text-transform: capitalize;
+}
+header .menu {
+  margin-left: auto;
+  display: none;
+}
+
+#hero {
+  width: 100%;
+  background: url(../images/herobg.svg) center center no-repeat;
+  background-size: cover;
+  padding-block: 80px;
+}
+#hero .row h1.title {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 80px;
+  line-height: 88px;
+  color: #ffffff;
+}
+#hero .row h1.title span {
+  background: linear-gradient(90deg, #6e137b 0%, #23147b 100%);
+  text-transform: capitalize;
+}
+@media (max-width: 700px) {
+  #hero .row h1.title {
+    font-weight: 800;
+    font-size: 52px;
+    line-height: 64px;
+    color: #ffffff;
+  }
+}
+#hero .row p.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+#hero .row a.buy-btn {
+  padding: 15px 32px;
+  background: linear-gradient(90deg, #6e137b 0%, #23147b 100%);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  border-radius: 0px 20px;
+  text-transform: capitalize;
+  display: block;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main {
+  width: 100%;
+}
+main #info {
+  width: 100%;
+  padding-block: 50px;
+}
+main #info .title-div {
+  border-right: 1px solid #fff;
+}
+@media (max-width: 900px) {
+  main #info .title-div {
+    border-right-color: transparent;
+  }
+}
+main #info h1.title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #ffffff;
+}
+main #info h2.title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 140%;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+main #info p.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+main #features {
+  width: 100%;
+  padding-block: 50px;
+}
+main #features h1.title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 140%;
+  color: #ffffff;
+  text-transform: capitalize;
+}
+@media (max-width: 600px) {
+  main #features h1.title {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 140%;
+    color: #ffffff;
+  }
+}
+main #features p.info {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #ffffff;
+}
+main #features .card-div {
+  width: 100%;
+}
+main #features .card-div div {
+  width: 100%;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px;
+}
+main #features .card-div div aside h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+main #features .card-div div aside p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.8);
+}/*# sourceMappingURL=style.css.map */
